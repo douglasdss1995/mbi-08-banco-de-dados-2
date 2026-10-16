@@ -27,25 +27,21 @@ Perguntas que ajudam:
 - Dá para cadastrar uma coisa nova (um produto, um médico) antes de ela aparecer em uma linha?
 - Se uma linha for apagada, que informação some junto?
 
-### Passo 2 · Primeira forma normal, 1FN (8 min)
+### Passo 2 · Dependências funcionais
 
-1. Há célula com **mais de um valor** (uma lista) ou **colunas repetidas** (`item_1`, `item_2`)?
-2. Reescrevam a planilha de modo que cada célula tenha **um** valor e cada linha seja uma ocorrência.
-3. Digam **qual é a chave primária** da nova planilha. Pode ser composta.
+1. Para cada coluna, perguntem:
+   - **Essa coluna depende de outra?** 
+   - **Essa coluna tem dependentes?**
 
-### Passo 3 · Dependências funcionais (8 min)
+Escrevam no formato `X → Y`.
 
-1. Para cada coluna, perguntem: **"dado qual coluna eu sei o valor desta?"** Escrevam no formato `X → Y`.
-2. Marquem as dependências **parciais** (dependem de só parte da chave composta).
-3. Marquem as **transitivas** (dependem de uma coluna que não é a chave).
-
-### Passo 4 · 2FN e 3FN (10 min)
+### Passo 3 · 2FN e 3FN
 
 1. Separem as colunas em **tabelas**, de modo que cada coluna dependa da chave inteira e de mais nada.
 2. Escrevam cada tabela no formato `tabela(coluna PK, coluna, coluna FK)`.
 3. Conferiram: nenhuma informação se repete entre linhas, e dá para reconstruir a planilha juntando as tabelas?
 
-### Passo 5 · Desenhem (9 min)
+### Passo 4 · Desenhem
 
 1. No **ERD Concepts**, desenhem as tabelas com as chaves e a **cardinalidade** (1:N ou N:N) de cada relacionamento.
 2. Escrevam **uma decisão difícil** do grupo e a justificativa em duas linhas. Exemplo: "guardamos o preço no item do
