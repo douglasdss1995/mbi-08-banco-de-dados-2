@@ -1,7 +1,5 @@
 # Oficina de normalização — roteiro do grupo
 
-Aula 2 · 16/10/2026 · 10:00 às 10:40 (mais 10 minutos de confronto)
-
 Cada grupo recebe **uma planilha** e transforma em tabelas normalizadas. O arquivo com as cinco planilhas é
 `planilhas-oficina.xlsx`. Veja no quadro qual é a do seu grupo.
 
@@ -9,11 +7,11 @@ Cada grupo recebe **uma planilha** e transforma em tabelas normalizadas. O arqui
 
 | Planilha | Assunto                             | Grupos |
 | -------- | ----------------------------------- | ------ |
-| A        | Pedidos de uma papelaria            | 1      |
-| B        | Matrículas de uma escola de idiomas | 2      |
-| C        | Consultas de uma clínica            | 3      |
-| D        | Aluguel de equipamentos             | 4      |
-| E        | Estoque por depósito                | 5      |
+| A        | Pedidos de uma papelaria            | 1 e 6  |
+| B        | Matrículas de uma escola de idiomas | 2 e 7  |
+| C        | Consultas de uma clínica            | 3 e 8  |
+| D        | Aluguel de equipamentos             | 4 e 9  |
+| E        | Estoque por depósito                | 5 e 10 |
 ## Os 5 passos
 
 Trabalhem juntos, com **uma pessoa digitando e as outras ditando**, trocando a cada passo. Anotem tudo em um documento
@@ -21,7 +19,7 @@ do grupo.
 
 ### Passo 1 · Ache os problemas (5 min)
 
-Leiam a planilha e escrevam **3 problemas**: uma anomalia de atualização, uma de inserção e uma de exclusão.
+Leiam a planilha e escrevam **3 problemas**: uma anomalia de **atualização**, uma de **inserção** e uma de **exclusão**.
 
 Perguntas que ajudam:
 
@@ -53,16 +51,6 @@ Perguntas que ajudam:
 2. Escrevam **uma decisão difícil** do grupo e a justificativa em duas linhas. Exemplo: "guardamos o preço no item do
    pedido, e não só no produto, porque o preço muda com o tempo".
 
-## Confronto (10:40 às 10:50)
-
-O seu grupo se junta ao **outro grupo que tem a mesma planilha**.
-
-1. Cada grupo mostra as tabelas finais em 2 minutos.
-2. Os dois grupos listam **as diferenças** (uma tabela a mais, uma coluna em outro lugar, uma chave diferente).
-3. Para cada diferença, decidam: **foi erro de um grupo ou são duas soluções válidas?** Defendam a resposta.
-4. Um aluno de cada dupla de grupos explica ao professor a diferença mais interessante.
-
-## 
-## Se terminarem antes
+## Se terminarem antes do fim da aula
 
 Normalizem também a planilha de **outro tipo** (de um grupo vizinho) e comparem depois.
