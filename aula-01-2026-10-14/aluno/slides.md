@@ -1,6 +1,6 @@
 # Banco de Dados 2
 
-Turma MCI-05 · 14/10 a 18/11/2026
+Turma MBI-08 · 14/10 a 18/11/2026
 
 Prof. Douglas dos Santos Silva
 

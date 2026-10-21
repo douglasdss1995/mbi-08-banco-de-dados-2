@@ -1,6 +1,6 @@
 # Exercício 1 — Ambiente, modelo relacional e normalização
 
-Banco de Dados 2 · Turma MCI-05 · Assunto 1 de 15 · Aulas 1 e 2
+Banco de Dados 2 · Turma MBI-08 · Assunto 1 de 15 · Aulas 1 e 2
 
 | | |
 |---|---|

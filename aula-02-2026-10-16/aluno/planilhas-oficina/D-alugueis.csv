@@ -1,0 +1,7 @@
+﻿contrato,retirada,devolucao,cod_cliente,cliente,telefone,equipamentos,dias,total
+L-01,01/10/2026,03/10/2026,C1,Hugo Vaz,(47) 99111-0001,Furadeira (R$ 30); Escada (R$ 20),2,R$ 100
+L-02,02/10/2026,05/10/2026,C2,Iara Melo,(47) 99222-0002,Betoneira (R$ 80),3,R$ 240
+L-03,04/10/2026,05/10/2026,C1,Hugo Vaz,(47) 99111-0001,Escada (R$ 20),1,R$ 20
+L-04,06/10/2026,09/10/2026,C3,Jonas Reis,(47) 99333-0003,Furadeira (R$ 30); Betoneira (R$ 80); Escada (R$ 20),3,R$ 390
+L-05,07/10/2026,08/10/2026,C2,Iara Melo,(47) 99222-0002,Furadeira (R$ 30),1,R$ 30
+L-06,08/10/2026,10/10/2026,C4,Kátia Dias,(47) 99444-0004,Betoneira (R$ 80); Escada (R$ 20),2,R$ 200

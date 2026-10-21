@@ -1,0 +1,7 @@
+﻿pedido,data,cod_cliente,cliente,cidade_cliente,estado,item_1,qtd_1,preco_1,item_2,qtd_2,preco_2,vendedor
+P-101,05/10/2026,C1,Lia Prado,Joinville,SC,Caderno 10 matérias,2,"18,00",Caneta azul,10,"2,50",Rui
+P-102,05/10/2026,C2,Teo Alves,Blumenau,SC,Caneta azul,5,"2,50",,,,Rui
+P-103,06/10/2026,C1,Lia Prado,Joinville,SC,Mochila,1,"120,00",Caderno 10 matérias,1,"18,00",Ana
+P-104,07/10/2026,C3,Bia Nunes,Curitiba,PR,Papel A4 (resma),3,"28,00",,,,Ana
+P-105,08/10/2026,C2,Teo Alves,Blumenau,SC,Papel A4 (resma),2,"28,00",Caneta azul,20,"2,50",Rui
+P-106,08/10/2026,C4,Davi Lopes,Curitiba,PR,Mochila,1,"120,00",,,,Ana

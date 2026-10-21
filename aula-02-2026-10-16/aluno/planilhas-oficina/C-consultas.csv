@@ -1,0 +1,8 @@
+﻿consulta,data,cod_paciente,paciente,convenio,desconto,medico,especialidade,valor_base,valor_final
+1,05/10/2026,P1,Maria Souza,Unimed,30%,Dr. Paulo,Cardiologia,R$ 300,R$ 210
+2,05/10/2026,P2,João Ramos,Particular,0%,Dra. Lúcia,Dermatologia,R$ 250,R$ 250
+3,06/10/2026,P1,Maria Souza,Unimed,30%,Dra. Lúcia,Dermatologia,R$ 250,R$ 175
+4,06/10/2026,P3,Rita Gomes,Bradesco,20%,Dr. Paulo,Cardiologia,R$ 300,R$ 240
+5,07/10/2026,P4,Caio Pires,Unimed,30%,Dr. Renato,Pediatria,R$ 200,R$ 140
+6,07/10/2026,P2,João Ramos,Particular,0%,Dr. Renato,Pediatria,R$ 200,R$ 200
+7,08/10/2026,P3,Rita Gomes,Bradesco,20%,Dra. Lúcia,Dermatologia,R$ 250,R$ 200

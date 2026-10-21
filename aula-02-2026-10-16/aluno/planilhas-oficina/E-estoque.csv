@@ -1,0 +1,9 @@
+﻿cod_produto,produto,categoria,cod_fornecedor,fornecedor,fone_fornecedor,cod_deposito,deposito,cidade_deposito,quantidade,custo_unit
+PR1,Parafuso M6,Fixação,F1,Metalúrgica Sul,(47) 3001-0001,D1,Depósito Norte,Joinville,500,"R$ 0,20"
+PR1,Parafuso M6,Fixação,F1,Metalúrgica Sul,(47) 3001-0001,D2,Depósito Sul,Blumenau,300,"R$ 0,20"
+PR2,Porca M6,Fixação,F1,Metalúrgica Sul,(47) 3001-0001,D1,Depósito Norte,Joinville,450,"R$ 0,15"
+PR3,Tinta branca 18 L,Pintura,F2,Tintas Sol,(47) 3002-0002,D2,Depósito Sul,Blumenau,40,"R$ 210,00"
+PR3,Tinta branca 18 L,Pintura,F2,Tintas Sol,(47) 3002-0002,D1,Depósito Norte,Joinville,25,"R$ 210,00"
+PR4,Pincel 2 polegadas,Pintura,F2,Tintas Sol,(47) 3002-0002,D2,Depósito Sul,Blumenau,120,"R$ 6,50"
+PR5,Lâmpada LED 9 W,Elétrica,F3,Luz & Cia,(47) 3003-0003,D1,Depósito Norte,Joinville,200,"R$ 7,90"
+PR5,Lâmpada LED 9 W,Elétrica,F3,Luz & Cia,(47) 3003-0003,D2,Depósito Sul,Blumenau,180,"R$ 7,90"

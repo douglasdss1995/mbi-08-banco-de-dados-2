@@ -1,6 +1,6 @@
 # Combinados da turma — Banco de Dados 2
 
-Turma MCI-05 · Professor Douglas dos Santos Silva · 14/10 a 18/11/2026 · 24 aulas
+Turma MBI-08 · Professor Douglas dos Santos Silva · 14/10 a 18/11/2026 · 24 aulas
 
 Esta página é a referência do curso. Quando tiver dúvida sobre nota, entrega ou frequência, volte aqui.
 

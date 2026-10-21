@@ -1,0 +1,9 @@
+﻿cod_aluno,aluno,turma,idioma,nivel,professor,fone_professor,sala,dia_semana,horario,data_matricula,nota_final
+A1,Ana Lima,T-ING1,Inglês,Básico,Marcos Silva,(47) 99001-0001,Sala 3,Seg e Qua,19:00,01/10/2026,"8,5"
+A1,Ana Lima,T-ESP1,Espanhol,Básico,Clara Mendes,(47) 99002-0002,Sala 1,Ter e Qui,19:00,01/10/2026,"9,0"
+A2,Bruno Reis,T-ING1,Inglês,Básico,Marcos Silva,(47) 99001-0001,Sala 3,Seg e Qua,19:00,02/10/2026,"7,0"
+A3,Carla Dias,T-ING2,Inglês,Intermediário,Marcos Silva,(47) 99001-0001,Sala 2,Ter e Qui,20:00,02/10/2026,"6,5"
+A3,Carla Dias,T-ESP1,Espanhol,Básico,Clara Mendes,(47) 99002-0002,Sala 1,Ter e Qui,19:00,03/10/2026,"8,0"
+A4,Davi Souza,T-ING2,Inglês,Intermediário,Marcos Silva,(47) 99001-0001,Sala 2,Ter e Qui,20:00,03/10/2026,"9,5"
+A4,Davi Souza,T-FRA1,Francês,Básico,Júlia Rocha,(47) 99003-0003,Sala 1,Sex,18:00,04/10/2026,"7,5"
+A5,Eva Costa,T-ING1,Inglês,Básico,Marcos Silva,(47) 99001-0001,Sala 3,Seg e Qua,19:00,04/10/2026,"10,0"
