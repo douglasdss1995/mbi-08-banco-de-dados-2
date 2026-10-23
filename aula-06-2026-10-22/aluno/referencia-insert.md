@@ -1,6 +1,6 @@
 # Referência: `INSERT`
 
-Banco de Dados 2 · Aula 7
+Banco de Dados 2 · Aula 6
 
 `INSERT` é o comando que **coloca linhas** em uma tabela. Faz parte do DML (*Data Manipulation Language*, linguagem de manipulação de
 dados), o grupo dos comandos que mexem nos **dados**, e não na estrutura. Esta é a folha de consulta da aula. Os exemplos usam a

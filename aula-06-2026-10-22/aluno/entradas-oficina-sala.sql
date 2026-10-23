@@ -1,8 +1,7 @@
 -- Oficina Mecânica · entradas-oficina-sala.sql
--- Exemplo guiado da aula 7: o professor carrega a Oficina ao vivo, seguindo as Entradas 1, 2 e 4 do pedido de validação.
--- Rode DEPOIS do 01_ddl.sql (aula 6), num banco recém-criado. Para repetir: rode o 01_ddl.sql de novo e depois este arquivo.
--- As Entradas 3 (reajuste) e 5 (correção) ficam para a aula 8: elas usam UPDATE e DELETE.
--- Depois da aula, copie este arquivo para aluno/ (exemplo guiado, regra 2 do CLAUDE.md).
+-- Exemplo guiado da aula 6 (segundo tempo): o professor carrega a Oficina ao vivo, seguindo as Entradas 1, 2 e 4 do pedido de validação.
+-- Rode DEPOIS do 01_ddl.sql, num banco recém-criado. Para repetir: rode o 01_ddl.sql de novo e depois este arquivo.
+-- As Entradas 3 (reajuste) e 5 (correção) ficam para a aula 7: elas usam UPDATE e DELETE.
 -- As datas usam um mês qualquer (o pedido dá só o dia); aqui, março de 2025. Cada aluno escolhe o seu mês.
 
 SET search_path TO oficina;
@@ -74,11 +73,11 @@ INSERT INTO item_servico (ordem_servico_id, servico_id, valor_cobrado) VALUES
     ((SELECT id FROM ordem_servico WHERE numero = 1006), 5,  80.00);   -- Balanceamento
 
 -- ===== Entrada 4 · ordens de serviço 1007 a 1010 =====
--- (a Entrada 3, o reajuste da troca de óleo, é UPDATE: aula 8. Aqui o valor cobrado já vem como 135.)
+-- (a Entrada 3, o reajuste da troca de óleo, é UPDATE: aula 7. Aqui o valor cobrado já vem como 135.)
 
 INSERT INTO ordem_servico (numero, data_abertura, veiculo_id, mecanico_id) VALUES
     (1007, '2025-03-12', 2, 1),   -- DEF4G56, Carlos
-    (1008, '2025-03-13', 4, 2),   -- QWE4R56, Marta (aberta por engano; a aula 8 apaga)
+    (1008, '2025-03-13', 4, 2),   -- QWE4R56, Marta (aberta por engano; a aula 7 apaga)
     (1009, '2025-03-14', 3, 3),   -- XYZ9K88, Paulo
     (1010, '2025-03-20', 1, 1);   -- ABC1D23, Carlos (nenhum serviço lançado ainda)
 
