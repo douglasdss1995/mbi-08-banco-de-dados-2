@@ -38,16 +38,16 @@ Prof. Douglas dos Santos Silva
 
 ## Slide 4 — As 4 provas são 4 entregas do projeto
 
-*Cada prova é uma versão do mesmo projeto, com uma tag no repositório*
+*Cada prova é uma versão do mesmo projeto*
 
 - Prova 1 · 30/10
-- Modelo, DDL, carga de dados e transações (tag prova-1)
+- Modelo, DDL, carga de dados e transações
 - Prova 3 · 13/11
-- Índices com EXPLAIN, funções, procedures e triggers (tag prova-3)
+- Índices com EXPLAIN, funções, procedures e triggers
 - Prova 2 · 06/11
-- Funções SQL, CTE, JSONB, window functions e views (tag prova-2)
+- Funções SQL, CTE, JSONB, window functions e views
 - Prova 4 · 18/11
-- Apresentação final: o projeto e o seu desenvolvimento (tag final)
+- Apresentação final: o projeto e o seu desenvolvimento
 
 ## Slide 5 — Os 10 temas, um por grupo
 
@@ -93,7 +93,7 @@ Prof. Douglas dos Santos Silva
 - Pode usar.
 - Tem que saber defender.
 - 1. Registre o uso
-- No README do repositório, anote qual IA usou e para quê. Uma linha por uso é suficiente.
+- No arquivo README.md da entrega, anote qual IA usou e para quê. Uma linha por uso é suficiente.
 - 2. Explique o que entregou
 - Você precisa saber explicar qualquer parte do que entregou. Quem não explica perde nota individual, mesmo com o código correto.
 
@@ -110,9 +110,7 @@ Prof. Douglas dos Santos Silva
 ## Slide 10 — Hoje, o ambiente fica pronto
 
 - Ferramentas
-- PostgreSQL, DBeaver ou DataGrip (você escolhe), ERD Concepts, Git, GitKraken e uma conta no GitHub. Os links de download estão no Classroom.
+- PostgreSQL, DBeaver ou DataGrip (você escolhe) e ERD Concepts. Os links de download estão no Classroom.
 - O que fazemos agora
-- Primeiro: ferramentas e repositório do grupo.
+- Primeiro: ferramentas.
 - Depois: exercício 1, parte 1. A entrega é pelo Classroom, sem horário limite.
-- Repositório do grupo
-- Crie bd2-grupo-NN-tema, público, e adicione douglasdss1995 como colaborador. Faça o primeiro commit.

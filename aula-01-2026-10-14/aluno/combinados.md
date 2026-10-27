@@ -12,12 +12,8 @@ transações, funções, procedures e triggers. O mesmo projeto evolui a cada pr
 ## Grupos e projeto
 
 - **3 alunos por grupo**, formados por sorteio na aula 1. O tema do projeto também é sorteado.
-- Cada grupo tem **um repositório público no GitHub**. O professor é colaborador: usuário
-  [`douglasdss1995`](https://github.com/douglasdss1995). Como o repositório é público, qualquer pessoa pode ver o que está
-  nele: use só dados fictícios e nunca coloque senhas nem dados pessoais reais.
-- O Git é usado pelo **GitKraken** (ferramenta gráfica), que o professor demonstra na aula 2.
-- Todos os membros fazem commits. O grupo entrega o projeto de cada prova com uma **tag** (`prova-1`, `prova-2`, `prova-3`,
-  `final`) e envia o link no Classroom.
+- A entrega de cada prova é feita pelo **Classroom**, com os arquivos do projeto. Use só dados fictícios e nunca coloque senhas
+  nem dados pessoais reais.
 
 ## Provas
 
@@ -55,7 +51,7 @@ Exemplo: provas 8, 6, 5 e 7 (média 6,5) e média dos exercícios 8. A prova 5 �
 
 A IA é **livre**, nos exercícios, nos projetos e nas provas. Duas regras:
 
-1. **Registre o uso.** No `README` do repositório, anote qual IA você usou e para quê (uma linha por uso é suficiente).
+1. **Registre o uso.** No arquivo `README.md` da entrega, anote qual IA você usou e para quê (uma linha por uso é suficiente).
 2. **Explique o que entregou.** Você precisa saber explicar qualquer parte do que entregou, com as suas palavras.
    Quem apresenta e não consegue explicar perde nota individual, mesmo que o código esteja correto.
 
@@ -92,6 +88,6 @@ Se você ainda não tem acesso, avise o professor hoje.
 
 ## Ferramentas
 
-PostgreSQL, **DBeaver ou DataGrip (você escolhe)**, ERD Concepts, Git, **GitKraken** e uma conta no GitHub. Os links de download estão
+PostgreSQL, **DBeaver ou DataGrip (você escolhe)** e ERD Concepts. Os links de download estão
 reunidos no Classroom, e a lista de conferência está em [checklist-ferramentas.md](checklist-ferramentas.md). A licença do
 DataGrip deve estar nas máquinas do laboratório; se faltar, avise o professor.

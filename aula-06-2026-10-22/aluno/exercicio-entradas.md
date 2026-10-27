@@ -20,7 +20,7 @@ Siglas: **DML** (*Data Manipulation Language*, linguagem de manipulação de dad
 ## O que fazer
 
 O pedido tem 5 entradas. **Hoje você faz só as Entradas 1, 2 e 4** (as que usam `INSERT`). As Entradas 3 e 5 (mudar e apagar) ficam para a
-aula 7, junto com as primeiras consultas.
+aula 7, junto com as consultas.
 
 1. Abra o banco do seu projeto, **vazio**: rode o seu `01_ddl.sql` (ele apaga e recria tudo).
 2. Leia o pedido do seu projeto. O pedido diz **o que entra**, não diz em qual coluna: você decide onde cada fato vai, olhando as suas tabelas.

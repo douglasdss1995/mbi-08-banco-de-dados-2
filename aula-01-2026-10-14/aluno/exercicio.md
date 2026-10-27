@@ -57,9 +57,8 @@ A **parte 1** é feita na aula 1 (às 11:00). A **parte 2** é liberada na aula 
 Responda em texto:
 
 1. Número do grupo, tema sorteado e nome dos integrantes.
-2. Link do repositório do grupo no GitHub (se ainda não foi criado, escreva "pendente" e crie na aula 2).
-3. **Uma frase** que explique o que o sistema do seu tema faz e para quem.
-4. **Cinco coisas** que esse sistema precisa guardar, escritas em linguagem comum (por exemplo, "os livros da
+2. **Uma frase** que explique o que o sistema do seu tema faz e para quem.
+3. **Cinco coisas** que esse sistema precisa guardar, escritas em linguagem comum (por exemplo, "os livros da
    biblioteca", "os empréstimos"). Não precisa ser tabela ainda.
 
 ---
@@ -119,16 +118,16 @@ Desenhe no **ERD Concepts** o diagrama das tabelas da questão 2.4, com as chave
 
 1. Termine o diagrama do tema do seu grupo, que foi começado no tempo de projeto da aula 2. Ele deve ter pelo menos
    **6 tabelas**, com chaves primárias, chaves estrangeiras e cardinalidades, e estar em **3FN**.
-2. Exporte o diagrama como imagem e suba no repositório do grupo, com um **commit seu**.
-3. **Entregue:** a imagem do diagrama e o link do seu commit.
+2. Exporte o diagrama como imagem.
+3. **Entregue:** a imagem do diagrama.
 
 ---
 
 ## Lista de conferência da entrega
 
 - [ ] Parte 1: prints do `SELECT version();`, do `psql --version` e do `SELECT * FROM saudacao;`.
-- [ ] Parte 1: grupo, tema, link do repositório, uma frase e cinco coisas.
+- [ ] Parte 1: grupo, tema, uma frase e cinco coisas.
 - [ ] Parte 2: respostas das questões 2.1 a 2.5.
 - [ ] Parte 2: imagem do diagrama da oficina (2.6).
-- [ ] Parte 2: imagem do diagrama do tema e link do seu commit (2.7).
+- [ ] Parte 2: imagem do diagrama do tema (2.7).
 - [ ] Se usou IA: qual e para quê, no fim da entrega.

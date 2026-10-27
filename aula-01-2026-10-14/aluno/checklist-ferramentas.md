@@ -19,12 +19,6 @@ Os links de download das ferramentas estão reunidos no **Google Classroom** da 
 - [ ] **ERD Concepts**, para criar diagramas. O professor informa o link na aula.
 - [ ] **Navegador atualizado** (Chrome ou Edge).
 - [ ] **Conta Google** com acesso à turma no Google Classroom.
-- [ ] **Git**, instalado e configurado com o seu nome e e-mail (`git config --global user.name` e `user.email`).
-  Site oficial: https://git-scm.com/downloads
-- [ ] **GitKraken Desktop**, para enviar o projeto ao GitHub sem usar comandos. É gratuito para repositórios públicos, e os
-  repositórios dos grupos serão públicos. Site oficial: https://www.gitkraken.com/download
-  Na primeira abertura, entre com a sua conta do GitHub.
-- [ ] **Conta no GitHub** (https://github.com). O grupo vai criar um repositório e enviar o projeto de cada prova para lá.
 
 ## Teste rápido
 
@@ -33,7 +27,6 @@ Os links de download das ferramentas estão reunidos no **Google Classroom** da 
 3. Abra o terminal e rode `psql --version`.
 4. Abra o ERD Concepts e crie um diagrama com uma tabela.
 5. Abra o Google Classroom da turma.
-6. Abra o GitKraken e entre com a sua conta do GitHub.
 
 Se algum passo falhar, avise o professor durante a aula.
 

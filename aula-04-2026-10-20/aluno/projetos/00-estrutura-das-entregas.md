@@ -1,9 +1,8 @@
 # Estrutura das entregas dos projetos (vale para os 10 projetos)
 
 Cada aluno desenvolve **o seu projeto**, sorteado entre os 10 temas, durante todo o curso e entrega uma versão a cada uma
-das provas 1, 2 e 3, mais a apresentação final (prova 4). As entregas são **individuais** (D-41); alunos com o mesmo tema
-podem trocar ideias. O que é específico de cada tema está em `projetos-referencia/NN-tema/NN-tema.md`.
-Contexto geral: [avaliação](../03-avaliacao-bd2.md) · [temas](../06-projetos-integradores.md).
+das provas 1, 2 e 3, mais a apresentação final (prova 4). As entregas são **individuais**; alunos com o mesmo tema
+podem trocar ideias. O que é específico de cada tema está no arquivo do projeto.
 
 ## Regras comuns
 
@@ -13,22 +12,19 @@ Contexto geral: [avaliação](../03-avaliacao-bd2.md) · [temas](../06-projetos-
 - O banco é recriado do zero rodando os scripts na ordem. **Entrega que não roda do zero perde pontos.**
 - Cada versão **acrescenta** à anterior; não se refaz o projeto a cada prova.
 - O `LEIAME.md` registra o uso de IA (o que a IA sugeriu, o que o aluno corrigiu) e **com quem o aluno conversou** sobre o
-  projeto (colegas do mesmo tema ou de outros). Ver «Colaboração entre colegas» em [avaliação](../03-avaliacao-bd2.md).
+  projeto (colegas do mesmo tema ou de outros). Ver «Colaboração entre colegas» em [avaliação](.
 
-## Entrega pelo GitHub
+## Entrega pelo Classroom
 
-Cada aluno cria **um repositório no GitHub** e envia os arquivos para lá. No Classroom, a atividade de cada prova recebe
-apenas o **link do repositório** (e a tag da entrega).
+Cada aluno entrega os arquivos do projeto na atividade de cada prova no **Google Classroom**.
 
-- **Nome do repositório:** `bd2-NN-tema-nome` (por exemplo, `bd2-01-biblioteca-marta`, com o primeiro nome do aluno).
-- **Criado na aula 1 ou 2**, logo depois do sorteio.
-- **Visibilidade:** **público** (o plano gratuito do GitKraken, a ferramenta de Git da turma, só atende repositórios públicos), com o professor adicionado como colaborador (usuário no GitHub: `douglasdss1995`, https://github.com/douglasdss1995).
-- **Tag por entrega:** `prova-1`, `prova-2`, `prova-3` e `final`. A tag é criada até **11:30 do dia da prova**; o que
-  for enviado depois não conta.
-- O histórico de commits **não entra na nota**: a turma ainda não teve aula de Git (ver [aula 2](../04-escopo-revisao-bd1.md)).
-- Mensagens de commit curtas e claras. Nada de senhas, dumps com dados pessoais reais ou arquivos grandes demais.
+- **Como enviar:** os arquivos da estrutura abaixo, em uma pasta compactada (`.zip`) ou um a um. O nome da entrega é `prova-1`,
+  `prova-2`, `prova-3` ou `final`.
+- **Prazo:** o horário da prova (até **11:30 do dia da prova**); o que for enviado depois não conta.
+- Cada versão **acrescenta** à anterior; entregue sempre o projeto completo até aquele ponto.
+- Nada de senhas, dumps com dados pessoais reais ou arquivos grandes demais.
 
-## Estrutura do repositório
+## Estrutura da pasta de entrega
 
 ```
 README.md                   (ou LEIAME.md) decisões, regras de negócio, colaboração, uso de IA
@@ -44,6 +40,7 @@ sql/
   08_procedures.sql         procedures (prova 3)
   09_triggers.sql           triggers: auditoria e regra de negócio (prova 3)
 evidencias/                 prints ou saídas de EXPLAIN, sessões simultâneas e testes manuais
+validacao/                  pedido de validação (prova 1): entradas.sql, consultas.sql, resultados.md, ataques.sql e achados.md
 instalar.sql                recria o banco do zero (entrega final)
 ```
 
@@ -51,7 +48,7 @@ instalar.sql                recria o banco do zero (entrega final)
 
 | Prova | Aula | Entrega | Conteúdo cobrado |
 |---|---|---|---|
-| 1 | 12 | Modelo, DDL, carga, transações e concorrência | Aulas 1–11 (revisão, oficinas práticas, modelagem, análise de bancos, transações e ACID) |
+| 1 | 12 | Modelo, DDL, carga, consultas do pedido de validação, integridade, transações e concorrência | Aulas 1–11 (revisão, modelagem do projeto, DDL e carga, consultas, `UPDATE`/`DELETE`, integridade, transações e ACID) |
 | 2 | 16 | Funções SQL, subconsultas/CTE, `JSONB` básico, window functions, views | Aulas 13–15 |
 | 3 | 21 | Índice, funções, procedures, triggers | Aulas 17–20 |
 | 4 | 23 e 24 | Apresentação final: demonstração e desenvolvimento do projeto | Todo o curso |
@@ -74,13 +71,13 @@ difícil** e **um problema que a IA errou ou que o aluno corrigiu**. Com 24 alun
 
 ## Apresentação final (prova 4, aulas 23 e 24)
 
-Metade da turma apresenta na aula 23 e a outra metade na aula 24 (D-08, decidida em 12/10/2026, e D-41). A tag `final`
+Metade da turma apresenta na aula 23 e a outra metade na aula 24. A entrega `final`
 vale até as 10:00 do dia em que o aluno apresenta. 6 minutos por aluno: demonstração de ponta a ponta (3 min),
-desenvolvimento do projeto (2 min), perguntas (1 min). Entrega final: o repositório com a tag `final`, que **recria o banco
+desenvolvimento do projeto (2 min), perguntas (1 min). Entrega final: a pasta `final` no Classroom, que **recria o banco
 do zero** com um único script (`instalar.sql`). O desenvolvimento do projeto conta: linha do tempo, decisões,
 dificuldades, uso de IA e aprendizados.
 
-**Rubrica da prova 4 (parte da entrega, 10 pontos; D-09, decidida em 12/10/2026):**
+**Rubrica da prova 4 (parte da entrega, 10 pontos):**
 
 | Critério | Pontos |
 |---|---|

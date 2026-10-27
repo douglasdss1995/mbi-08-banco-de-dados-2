@@ -1,6 +1,6 @@
 # Projeto 9 — Hotel ou pousada
 
-Estrutura comum das entregas (GitHub, tags, notas): [00-estrutura-das-entregas.md](00-estrutura-das-entregas.md).
+Estrutura comum das entregas (Classroom, notas): [00-estrutura-das-entregas.md](00-estrutura-das-entregas.md).
 Projetos de referência já detalhados: [01-biblioteca.md](01-biblioteca.md) e [02-clinica-medica.md](02-clinica-medica.md).
 
 ## Cenário
@@ -116,9 +116,9 @@ consumo da estadia, manutenção do quarto, pagamento. O grupo decide e **justif
   observações. Cada hóspede tem campos diferentes.
 - Número da reserva no formato `HT-2026-000123`, gerado com `LPAD`.
 
-## Entrega 1 — Prova 1 (aula 12): modelo, DDL, carga e transações
+## Entrega 1 — Prova 1 (aula 12): modelo, DDL, carga, consultas, integridade e transações
 
-Tag: `prova-1`. As transações são dadas na aula 11, um dia antes: a entrega é pequena e guiada pelo exercício do dia.
+Entrega no Classroom: `prova-1`. As transações são dadas na aula 11, um dia antes: a entrega é pequena e guiada pelo exercício do dia.
 
 | # | Item | Arquivo | O que entregar |
 |---|---|---|---|
@@ -128,13 +128,15 @@ Tag: `prova-1`. As transações são dadas na aula 11, um dia antes: a entrega �
 | 4 | Carga | `sql/02_carga.sql` | 3 tipos de quarto com tarifas em 3 temporadas (alguns valores mudaram), 20 quartos, 40 hóspedes, 60 reservas (confirmadas, canceladas, *no-show*), 50 estadias (em curso e encerradas) com acompanhantes, 12 itens de consumo, 150 consumos e pagamentos. Dados que **exercitam as regras** (estadia que atravessa duas temporadas, check-out às 15:00, quarto aguardando limpeza, tipo de quarto com uma única unidade livre) |
 | 5 | Transações | `sql/03_transacoes.sql` | Check-in como transação (atribuir o quarto, criar a estadia, registrar os hóspedes e mudar o quarto para `ocupado`, tudo ou nada), com `ROLLBACK` quando falhar |
 | 6 | Concorrência | `sql/03_transacoes.sql` + `evidencias/` | **Duas sessões (balcão e site) reservando o último quarto do tipo para o mesmo período**: mostrar o problema (*overbooking*), a solução (bloqueio de linha ou isolamento) e explicar por quê |
-| 7 | Decisões | `README.md` | As respostas dos 6 pontos de decisão acima, por que a transação protege o que protege, divisão do trabalho e uso de IA |
+| 7 | Decisões | `README.md` | As respostas dos 6 pontos de decisão acima, por que a transação protege o que protege, com quem conversou e uso de IA |
+| 8 | Consultas | `validacao/consultas.sql` e `validacao/resultados.md` | As 16 consultas do pedido de validação do seu tema (C1 a C16), cada uma com o resultado copiado do banco e comparado com o «O que sai» |
+| 9 | Integridade | `sql/01_ddl.sql`, `validacao/entradas.sql`, `validacao/ataques.sql` e `validacao/achados.md` | As Entradas 1 a 5 do pedido rodando do zero; os testes R2 e R3 com a mensagem do banco; pelo menos 5 constraints (`NOT NULL`, `UNIQUE`, `CHECK` e `FOREIGN KEY` com `ON DELETE` escrito) e 5 ataques do cenário do erro, 2 deles aceitos antes da constraint |
 
-Dado na aula: modelagem (9), análise de bancos (10), transações e ACID (11), DDL e normalização (revisão, aulas 2 e 3).
+Dado na aula: DDL e normalização (aulas 2 e 3), modelagem do projeto (4 e 5), DDL e carga (6 a 8), consultas (9), `UPDATE`, `DELETE`, integridade e padronização (10), transações e ACID (11).
 
 ## Entrega 2 — Prova 2 (aula 16): funções SQL, subconsultas/CTE, `JSONB`, window functions e views
 
-Tag: `prova-2`.
+Entrega no Classroom: `prova-2`.
 
 | # | Item | Arquivo | O que entregar |
 |---|---|---|---|
@@ -143,13 +145,13 @@ Tag: `prova-2`.
 | 3 | `JSONB` | `sql/04_consultas.sql` | 3 consultas sobre `preferencias` (hóspedes com alergia registrada, hóspedes que viajam com pet, listar as preferências de andar) |
 | 4 | Window functions | `sql/05_janelas_views.sql` | 2 consultas: ranking de quartos por receita dentro de cada tipo de quarto (`RANK`) e receita acumulada por mês |
 | 5 | Views | `sql/05_janelas_views.sql` | `vw_quartos_hoje` (situação de cada quarto agora e hóspede atual) e uma view materializada com ocupação e receita mensais por tipo de quarto, com atualização |
-| 6 | Decisões | `README.md` | Decisões, o que a IA errou, divisão do trabalho |
+| 6 | Decisões | `README.md` | Decisões, o que a IA errou, com quem conversou |
 
 Dado na aula: funções SQL (13), subconsultas, CTE e `JSONB` (14), window functions e views (15).
 
 ## Entrega 3 — Prova 3 (aula 21): índice, funções, procedures e triggers
 
-Tag: `prova-3`. Com o bloco de `PL/pgSQL` em três dias (aulas 18 a 20, com 40 min de projeto por dia), a entrega pede
+Entrega no Classroom: `prova-3`. Com o bloco de `PL/pgSQL` em três dias (aulas 18 a 20, com 40 min de projeto por dia), a entrega pede
 **mais rotinas e testadas**, e a parte de índice segue enxuta.
 
 | # | Item | Arquivo | O que entregar |
@@ -158,28 +160,30 @@ Tag: `prova-3`. Com o bloco de `PL/pgSQL` em três dias (aulas 18 a 20, com 40 m
 | 2 | Funções | `sql/07_funcoes.sql` | 3 ou mais: `calcular_diarias(tipo, entrada, saida, hospedes)` (tarifa da temporada da noite de entrada para todas as noites e adicional por hóspede), `quarto_disponivel(quarto, entrada, saida)` (sem estadia e fora da manutenção, retornando o motivo) e `valor_cancelamento(reserva, data)` (aplica as faixas de cancelamento). Cada uma com chamada de teste e resultado em `evidencias/` |
 | 3 | Procedures | `sql/08_procedures.sql` | 3: `fazer_reserva(hospede, tipo, entrada, saida, hospedes)` (mínimo de noites, capacidade, disponibilidade do tipo, sinal), `fazer_checkin(reserva, quarto)` (quarto do tipo, livre, sem conflito) e `fazer_checkout(estadia)` (diárias, saída tardia, consumo e valor final). Erros com `RAISE EXCEPTION` e mensagens claras, cada uma com um teste que dá certo e um que falha |
 | 4 | Triggers | `sql/09_triggers.sql` | 2: **auditoria** das mudanças de status da reserva e da estadia (quem, quando, antes e depois) e **regra de negócio** (ao fazer o check-out, o quarto vai para `aguardando limpeza`), com um teste de cada |
-| 5 | Decisões | `README.md` | Onde cada regra ficou (função, procedure, trigger ou `CHECK`) e por quê, divisão do trabalho, uso de IA |
+| 5 | Decisões | `README.md` | Onde cada regra ficou (função, procedure, trigger ou `CHECK`) e por quê, com quem conversou, uso de IA |
 
 Dado na aula: índices e `generate_series` (17), funções (18), procedures (19), triggers (20).
 
 ## Entrega final — Prova 4 (aulas 23 e 24): apresentação
 
-Tag: `final`.
+Entrega no Classroom: `final`.
 
 - **Demonstração (6 min):** um cenário de ponta a ponta: o hóspede reserva uma suíte na alta temporada, a pousada recusa a
   reserva de 1 noite, o último quarto do tipo é vendido uma única vez para dois pedidos simultâneos, o check-in atribui o
   quarto, o hóspede consome e sai às 15:00, e o check-out calcula o valor com meia diária e consumo, deixando o quarto
   aguardando limpeza. O relatório mostra a ocupação. Executado ao vivo por uma procedure.
 - **Desenvolvimento do projeto (4 min):** linha do tempo, decisões difíceis, dificuldades, o que a IA errou e o que o grupo aprendeu.
-- **Entrega:** repositório com `instalar.sql` que recria o banco do zero e `README.md` final.
+- **Entrega:** arquivos no Classroom, com `instalar.sql` que recria o banco do zero e `README.md` final.
 
-## Rubrica (parte do grupo, 10 pontos por prova)
+## Rubrica (a entrega, 10 pontos por prova)
 
 | Prova | Item | Pontos |
 |---|---|---|
-| 1 | Modelo e justificativas (itens 1, 3 e 7) | 3,0 |
-| 1 | DDL com regras no banco (item 2) | 2,5 |
-| 1 | Carga que exercita as regras (item 4) | 1,5 |
+| 1 | Modelo e justificativas (itens 1, 3 e 7) | 2,0 |
+| 1 | DDL com regras no banco (item 2) | 1,5 |
+| 1 | Carga que exercita as regras (item 4) | 1,0 |
+| 1 | Consultas do pedido de validação (item 8) | 1,5 |
+| 1 | Integridade: R2, R3, constraints e ataques (item 9) | 1,0 |
 | 1 | Transação e concorrência, com explicação (itens 5 e 6) | 3,0 |
 | 2 | Funções SQL (item 1) | 2,5 |
 | 2 | Subconsultas e CTE (item 2) | 2,0 |
@@ -194,11 +198,11 @@ Tag: `final`.
 | 4 | Demonstração: cenário de ponta a ponta, regras de negócio funcionando ao vivo | 4,0 |
 | 4 | Desenvolvimento do projeto: linha do tempo, decisões e dificuldades | 2,5 |
 | 4 | Uso de IA: o que a IA errou e o que o grupo corrigiu | 1,5 |
-| 4 | Entrega: `instalar.sql` que recria o banco do zero, `README.md` e divisão do trabalho | 2,0 |
+| 4 | Entrega: `instalar.sql` que recria o banco do zero, `README.md` e colaboração registrada | 2,0 |
 
-Penalidade: entrega que não roda do zero, sem `README.md` ou sem divisão do trabalho perde até 2 pontos.
-Na prova 4 não há penalidade à parte: o critério «Entrega» já cobre `instalar.sql`, `README.md` e divisão do trabalho. As perguntas do professor entram na parte individual (40%).
-A nota do aluno é 60% desta parte (grupo) e 40% individual (20% a parte apresentada e 20% a pergunta individual, D-36).
+Penalidade: entrega que não roda do zero, sem `README.md` ou sem a colaboração registrada perde até 2 pontos.
+Na prova 4 não há penalidade à parte: o critério «Entrega» já cobre `instalar.sql`, `README.md` e colaboração registrada. As perguntas do professor entram na parte individual (40%).
+A nota do aluno é 60% desta parte (a entrega) e 40% a explicação individual (apresentação curta ou pergunta sobre a própria entrega).
 
 ## Diferenças em relação aos projetos anteriores
 
