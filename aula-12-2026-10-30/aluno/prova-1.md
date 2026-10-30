@@ -56,5 +56,5 @@ Entregue na atividade **«Prova 1»** do Classroom:
 
 - Consulta e IA (inteligência artificial) liberadas.
 - Na pergunta, quem explica é **você** (ou o seu grupo).
-- Tudo no DBeaver.
+- Tudo no DBeaver ou Datagrip.
 - Faltou? Fica com a nota da entrega e 0 na pergunta.
