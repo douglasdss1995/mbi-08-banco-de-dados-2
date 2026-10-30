@@ -101,7 +101,7 @@ Pergunta para decidir: **a informação antiga ainda importa?** Se importa, não
 
 ## 6. Conferir quantas linhas mudaram
 
-- O `psql` mostra `UPDATE 1` ou `DELETE 2` depois do comando. O DBeaver mostra as linhas afetadas.
+- O DBeaver mostra as linhas afetadas.
 - `RETURNING` devolve as linhas que foram alteradas ou apagadas, no mesmo comando:
 
 ```sql

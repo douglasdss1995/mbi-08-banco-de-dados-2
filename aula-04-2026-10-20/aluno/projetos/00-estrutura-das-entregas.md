@@ -31,8 +31,6 @@ README.md                   (ou LEIAME.md) decisões, regras de negócio, colabo
 diagrama/                   arquivo do ERD Concepts + imagem (PNG ou PDF)
 sql/
   01_ddl.sql                estrutura (prova 1)
-  02_carga.sql              dados de teste (prova 1)
-  03_transacoes.sql         transações e concorrência (prova 1)
   04_consultas.sql          funções SQL, subconsultas, CTE, JSONB (prova 2)
   05_janelas_views.sql      window functions e views (prova 2)
   06_indices.sql            índice e EXPLAIN (prova 3)
@@ -48,7 +46,7 @@ instalar.sql                recria o banco do zero (entrega final)
 
 | Prova | Aula | Entrega | Conteúdo cobrado |
 |---|---|---|---|
-| 1 | 12 | Modelo, DDL, carga, consultas do pedido de validação, integridade, transações e concorrência | Aulas 1–11 (revisão, modelagem do projeto, DDL e carga, consultas, `UPDATE`/`DELETE`, integridade, transações e ACID) |
+| 1 | 12 | Modelo, DDL, carga (`entradas.sql`), consultas do pedido de validação e integridade | Aulas 1–11 (revisão, modelagem do projeto, DDL e carga, consultas, `UPDATE`/`DELETE` e integridade) |
 | 2 | 16 | Funções SQL, subconsultas/CTE, `JSONB` básico, window functions, views | Aulas 13–15 |
 | 3 | 21 | Índice, funções, procedures, triggers | Aulas 17–20 |
 | 4 | 23 e 24 | Apresentação final: demonstração e desenvolvimento do projeto | Todo o curso |
@@ -57,6 +55,8 @@ instalar.sql                recria o banco do zero (entrega final)
 
 - **60% a entrega** (10 pontos pela rubrica de cada projeto) e **40% a explicação individual** (apresentação curta ou
   pergunta individual sobre a própria entrega).
+- **Prova 1:** individual ou em grupo do mesmo projeto; a explicação é de uma consulta do pedido de validação sorteada
+  (1 a 16), na mesa do professor, sem apresentação à frente.
 - Provas 1 a 3: **um terço da turma, sorteado, apresenta** (cerca de 5 minutos) e cada aluno apresenta uma vez nas três
   provas; **os demais respondem uma pergunta individual por escrito** no Classroom. As perguntas de cada prova são definidas
   quando o banco for montado (T-05): um banco por prova, em `professor/` de cada aula. As regras de pergunta oral sorteada e
