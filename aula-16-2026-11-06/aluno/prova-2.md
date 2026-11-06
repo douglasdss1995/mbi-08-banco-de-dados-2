@@ -7,7 +7,7 @@ SQL: *Structured Query Language*.
 | | |
 |---|---|
 | **Como fazer** | Em dupla, no banco da Loja Virtual |
-| **Entrega** | Cada aluno entrega um `.zip` com o arquivo `prova-2.sql` |
+| **Entrega** | Cada aluno entrega um `.zip` com o arquivo `prova-2.sql` e **um print do resultado de cada questão** (10 imagens) |
 | **Nome do `.zip`** | `Nome completo - 2.zip` (exemplo: `Ana Souza - 2.zip`) |
 | **Prazo** | Até o fim da aula de 06/11/2026, na atividade «Prova 2» do Classroom |
 | **Nota** | 0 a 10: cada questão vale 1 ponto |
@@ -18,7 +18,8 @@ SQL: *Structured Query Language*.
 2. Crie o arquivo `prova-2.sql`. Na primeira linha, escreva os nomes da dupla em um comentário.
 3. Para cada questão, escreva um comentário com o número e a pergunta, e depois a consulta.
 4. Rode a consulta e compare com o «Confira».
-5. No fim, rode o arquivo inteiro do zero, monte o `.zip` e entregue.
+5. Tire um **print do resultado de cada questão** logo depois de rodá-la e salve com o nome `questao-01.png`, `questao-02.png`, até `questao-10.png`.
+6. No fim, rode o arquivo inteiro do zero, coloque o `prova-2.sql` e os 10 prints no mesmo `.zip` e entregue.
 
 ## Regras
 
@@ -26,6 +27,14 @@ SQL: *Structured Query Language*.
 - Sem `LIMIT`: cada pergunta é sobre todas as linhas.
 - Questão que dá erro ou não bate com o «Confira» vale 0. Certa, com um detalhe errado (coluna ou ordem), vale 0,5.
 - O arquivo inteiro precisa rodar sem erro.
+
+## Os prints
+
+- **Um print por questão**, com o nome do arquivo `questao-NN.png` (`NN` com dois dígitos: `questao-01.png`, `questao-10.png`). Pode ser `.jpg`.
+- O print mostra **o resultado da consulta** na tela do cliente de banco de dados, com as colunas e as primeiras linhas.
+- **O print precisa ser legível:** tire só a área do resultado, sem cortar as colunas, e confira ao abrir a imagem se dá para ler os nomes e os valores. Foto da tela do celular não vale.
+- Na questão 10, o print é da última consulta, depois do `REFRESH`.
+- Todas as imagens ficam no mesmo `.zip` do `prova-2.sql`, sem pastas dentro.
 
 ## Questão 1 · Rastreio das remessas
 
