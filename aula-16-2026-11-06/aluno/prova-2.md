@@ -33,7 +33,7 @@ SQL: *Structured Query Language*.
 - **Um print por questão**, com o nome do arquivo `questao-NN.png` (`NN` com dois dígitos: `questao-01.png`, `questao-10.png`). Pode ser `.jpg`.
 - O print mostra **o resultado da consulta** na tela do cliente de banco de dados, com as colunas e as primeiras linhas.
 - **O print precisa ser legível:** tire só a área do resultado, sem cortar as colunas, e confira ao abrir a imagem se dá para ler os nomes e os valores. Foto da tela do celular não vale.
-- Na questão 10, o print é da última consulta, depois do `REFRESH`.
+- Na questão 10, o print é da consulta feita na view.
 - Todas as imagens ficam no mesmo `.zip` do `prova-2.sql`, sem pastas dentro.
 
 ## Questão 1 · Rastreio das remessas
@@ -244,13 +244,13 @@ Exemplo de como a saída deve ficar. Os dados são só um exemplo da estrutura (
 | 2026-09-01 | 15244.36 | 27243.16 |
 
 
-## Questão 10 · Compras por fornecedor guardadas
+## Questão 10 · Compras por fornecedor em uma view
 
 O comprador quer um resumo pronto das compras, sem refazer a conta toda vez.
 
-Uma view materializada guarda o resultado da consulta e só muda quando você manda atualizar. Aqui ela vai resumir, por fornecedor, as compras que já chegaram.
+Uma view guarda uma consulta com um nome, e você a usa depois como se fosse uma tabela. Aqui ela vai resumir, por fornecedor, as compras que já chegaram.
 
-Crie a view materializada `mv_compras_por_fornecedor`, só com as compras **recebidas**:
+Crie a view `vw_compras_por_fornecedor`, só com as compras **recebidas**:
 
 | O que mostrar | Como |
 |---|---|
@@ -259,7 +259,7 @@ Crie a view materializada `mv_compras_por_fornecedor`, só com as compras **rece
 | Unidades | Quantas unidades chegaram |
 | Custo total | Quantidade vezes custo, somado |
 
-Depois, atualize a view com `REFRESH` e consulte, do maior custo total para o menor. **Confira:** 5 linhas. A primeira é `Gama Atacado`, com `78492.60`.
+Depois, consulte a view, do maior custo total para o menor. **Confira:** 5 linhas. A primeira é `Gama Atacado`, com `78492.60`.
 
 Exemplo de como a saída deve ficar. Os dados são só um exemplo da estrutura (colunas e formato); o seu resultado pode ter outros valores:
 
