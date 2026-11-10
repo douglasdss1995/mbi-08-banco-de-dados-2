@@ -52,7 +52,7 @@ Palavras que usamos sempre com o mesmo sentido: **parâmetro** (o que a função
 - A função **só calcula e devolve**. Ela não grava nada (`INSERT`, `UPDATE`, `DELETE` ficam para as procedures).
 - Uma mensagem de erro diz o motivo com as palavras da loja: «Pedido 999 não existe».
 - Não use `LIMIT` para cortar o resultado de uma função: cada pergunta é sobre todas as linhas.
-- Apoio: [referencia-criar-funcoes.md](referencia-criar-funcoes.md).
+- Apoio: [referencia-criar-funcoes.md](referencia-criar-funcoes.md). Para pesquisar a estrutura de uma função, os tipos que ela recebe e devolve e os tipos de variável: [referencia-estrutura-de-uma-funcao.md](referencia-estrutura-de-uma-funcao.md).
 
 # Parte 1 — Funções em SQL
 

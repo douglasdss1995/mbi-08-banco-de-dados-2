@@ -4,6 +4,8 @@ Banco de Dados 2 · Turma MBI-08 · Aulas 17 e 18
 
 SQL: *Structured Query Language*. PL/pgSQL: *Procedural Language/PostgreSQL*. Função: uma regra guardada no banco, com nome e parâmetros.
 
+Para ir além (todos os tipos que uma função recebe e devolve, e todos os tipos de variável), veja a [referência de pesquisa](referencia-estrutura-de-uma-funcao.md).
+
 ## Antes da função: o bloco anônimo
 
 Um bloco anônimo roda **uma vez** e some. Não tem nome, não recebe parâmetro e não devolve valor. Serve para testar um trecho de `PL/pgSQL`.
