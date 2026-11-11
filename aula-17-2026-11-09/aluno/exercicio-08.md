@@ -52,7 +52,7 @@ Palavras que usamos sempre com o mesmo sentido: **parâmetro** (o que a função
 - A função **só calcula e devolve**. Ela não grava nada (`INSERT`, `UPDATE`, `DELETE` ficam para as procedures).
 - Uma mensagem de erro diz o motivo com as palavras da loja: «Pedido 999 não existe».
 - Não use `LIMIT` para cortar o resultado de uma função: cada pergunta é sobre todas as linhas.
-- Apoio: [referencia-criar-funcoes.md](referencia-criar-funcoes.md). Para pesquisar a estrutura de uma função, os tipos que ela recebe e devolve e os tipos de variável: [referencia-estrutura-de-uma-funcao.md](referencia-estrutura-de-uma-funcao.md).
+- Apoio: [referencia-criar-funcoes.md](referencia-criar-funcoes.md). Para pesquisar a estrutura de uma função, os tipos que ela recebe e devolve e os tipos de variável: [referencia-estrutura-de-uma-funcao.md](referencia-estrutura-de-uma-funcao.md). Para o que já vem pronto no banco (`FOUND`, `COALESCE`, `LEAST`, `AND`, `IN`...): [referencia-funcoes-operadores-e-variaveis.md](referencia-funcoes-operadores-e-variaveis.md).
 
 # Parte 1 — Funções em SQL
 
@@ -67,6 +67,13 @@ Toda promoção da loja tem um percentual de desconto, e cada tela faz essa cont
 | Recebe | Devolve |
 |---|---|
 | `p_valor` (número) e `p_percentual` (número) | o valor com o desconto, em 2 casas |
+
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `valor_com_desconto(200, 10)` | `180.00` |
+| `valor_com_desconto(59.90, 15)` | `50.92` |
 
 ### Passo a passo
 
@@ -101,6 +108,13 @@ Quando abro um pedido, quero saber quanto custam os itens dele, antes do descont
 | Recebe                      | Devolve                                           |
 | --------------------------- | ------------------------------------------------- |
 | `p_pedido` (o id do pedido) | a soma de `quantidade * preco_unitario` dos itens |
+
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `subtotal_do_pedido(1)` | `1002.60` |
+| `subtotal_do_pedido(999999)` | `0` (o pedido não existe: nenhum item) |
 
 ### Passo a passo
 
@@ -137,6 +151,22 @@ Quero saber quanto cada cliente já gastou comigo. Conte só o que virou venda: 
 | Recebe                        | Devolve                                                                            |
 | ----------------------------- | ---------------------------------------------------------------------------------- |
 | `p_cliente` (o id do cliente) | a soma do `total` das vendas (`pago`, `enviado`, `entregue`); `0` se nunca comprou |
+
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `gasto_do_cliente(25)` | `3417.96` |
+| `gasto_do_cliente(1)` | `2693.91` |
+
+Na consulta com todos os clientes:
+
+| nome | gasto |
+|---|---|
+| Cliente 25 | 3417.96 |
+| Cliente 37 | 3417.96 |
+| Cliente 09 | 3361.47 |
+| ... | ... |
 
 ### Passo a passo
 
@@ -178,6 +208,14 @@ Aqui a função devolve **várias linhas**. Em vez de `RETURNS numeric`, você u
 | Recebe | Devolve |
 |---|---|
 | `p_cliente` (o id do cliente) | uma tabela com `numero`, `status` e `total` de cada pedido, do mais antigo ao mais novo |
+
+**Exemplo de retorno** de `SELECT * FROM pedidos_do_cliente(25);` (o ano do número muda conforme o dia em que você carregou a base):
+
+| numero | status | total |
+|---|---|---|
+| PD-2026-000024 | carrinho | |
+| PD-2026-000064 | pago | 2018.07 |
+| PD-2026-000104 | entregue | 1399.89 |
 
 ### Passo a passo
 
@@ -232,6 +270,22 @@ Não quero descobrir que um produto acabou só quando o cliente reclama. Quero u
 | `p_produto` (o id do produto) | `repor` (estoque abaixo do mínimo), `atenção` (abaixo de 4 vezes o mínimo) ou `ok` |
 
 Se o produto não existe, a função para com a mensagem `Produto 999 não existe`.
+
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `classificar_estoque(3)` | `repor` |
+| `classificar_estoque(1)` | `ok` |
+| `classificar_estoque(999)` | erro: `Produto 999 não existe` |
+
+Na consulta que conta os produtos de cada situação:
+
+| situacao | count |
+|---|---|
+| atenção | 5 |
+| ok | 15 |
+| repor | 10 |
 
 ### Passo a passo
 
@@ -288,6 +342,14 @@ O cliente digita o código do cupom no carrinho, e eu preciso saber de quanto é
 
 Se o cupom não existe, a função para com a mensagem `Cupom XYZ não existe`.
 
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `desconto_do_cupom('NATAL20', 200)` | `40.00` (20% de 200) |
+| `desconto_do_cupom('FRETE50', 30)` | `30` (o fixo é 50, mas a compra é só 30) |
+| `desconto_do_cupom('XYZ', 100)` | erro: `Cupom XYZ não existe` |
+
 ### Passo a passo
 
 1. **Variável de linha inteira.** `c cupom%ROWTYPE;` guarda a linha inteira do cupom. Você lê as colunas com `c.tipo` e `c.valor`.
@@ -338,6 +400,14 @@ Meus vendedores ganham comissão em cada venda, e o percentual depende do cargo 
 
 Se o pedido não existe, a função para com a mensagem `Pedido 999 não existe`.
 
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `comissao_do_pedido(1)` | `30.08` (3% de 1002.60) |
+| `comissao_do_pedido(2)` | `0` (o pedido não tem vendedor) |
+| `comissao_do_pedido(999999)` | erro: `Pedido 999999 não existe` |
+
 ### Passo a passo
 
 1. **Consulta sem função.** Veja o `subtotal`, o `desconto` e o `vendedor_id` do pedido 1. Veja o `comissao_percentual` do cargo desse vendedor (ligue `funcionario` e `cargo`). Rode.
@@ -373,6 +443,14 @@ O cliente comprou 3 unidades de um produto e já pediu para devolver 1. Quantas 
 | Recebe | Devolve |
 |---|---|
 | `p_pedido` e `p_produto` (os dois ids) | a quantidade comprada menos a quantidade já em devolução (`solicitada` ou `concluida`; a `recusada` não conta) |
+
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `quantidade_devolvivel(8, 6)` | `2` (comprou 3 e já pediu para devolver 1) |
+| `quantidade_devolvivel(20, 6)` | `3` (nada em devolução) |
+| `quantidade_devolvivel(9, 19)` | `1` |
 
 ### Passo a passo
 
@@ -410,6 +488,18 @@ Regras da loja: só o pedido `entregue` pode ser devolvido, e até 7 dias depois
 
 Se o pedido não existe, a função para com a mensagem `Pedido 999 não existe`.
 
+**Exemplo de retorno** da consulta que conta as respostas por status (a divisão entre `ok` e `Prazo de 7 dias vencido` muda conforme o dia em que você carregou a base):
+
+| status | resposta | count |
+|---|---|---|
+| aguardando_pagamento | Pedido ainda não foi entregue | 10 |
+| cancelado | Pedido ainda não foi entregue | 10 |
+| carrinho | Pedido ainda não foi entregue | 10 |
+| entregue | Prazo de 7 dias vencido | 37 |
+| entregue | ok | 3 |
+| enviado | Pedido ainda não foi entregue | 20 |
+| pago | Pedido ainda não foi entregue | 30 |
+
 ### Passo a passo
 
 1. Busque o `status` e o `entregue_em` do pedido com `SELECT ... INTO`.
@@ -439,6 +529,22 @@ Quero premiar quem mais compra na loja. Cada cliente fica numa faixa pelo quanto
 | `p_cliente` (o id do cliente) | o nome da faixa |
 
 Se o cliente não existe, a função para com a mensagem `Cliente 999 não existe`.
+
+**Exemplo de retorno:**
+
+| Chamada | Retorno |
+|---|---|
+| `faixa_do_cliente(25)` | `ouro` |
+| `faixa_do_cliente(1)` | `prata` |
+| `faixa_do_cliente(999)` | erro: `Cliente 999 não existe` |
+
+Na consulta que conta os clientes de cada faixa:
+
+| faixa | count |
+|---|---|
+| bronze | 20 |
+| ouro | 9 |
+| prata | 11 |
 
 ### Passo a passo
 
