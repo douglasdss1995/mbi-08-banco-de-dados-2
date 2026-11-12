@@ -4,7 +4,7 @@ Banco de Dados 2 · Turma MBI-08 · Aulas 17 a 21
 
 SQL: *Structured Query Language*. PL/pgSQL: *Procedural Language/PostgreSQL* (a linguagem de programação do PostgreSQL).
 
-Tudo o que aparece nos slides, nos exercícios 8, 9 e 10 e na prova 3 sem ter sido criado por você está explicado aqui: as variáveis que o banco cria sozinho, as funções prontas e os operadores.
+Tudo o que aparece nos slides, nos exercícios 8, 9 e 10 e na prática da aula 21 sem ter sido criado por você está explicado aqui: as variáveis que o banco cria sozinho, as funções prontas e os operadores.
 Os resultados foram testados na base da Loja Virtual (`SET search_path TO loja;`).
 
 ## 1. Variáveis que o PL/pgSQL cria sozinho
@@ -48,7 +48,7 @@ Na mensagem, `true` aparece como `t` e `false` como `f`.
 | `COALESCE(a, b)` | Devolve o primeiro valor que não é vazio (`NULL`) | `COALESCE(NULL, 0)` | `0` | exercício 8 (funções 2, 3 e 8) |
 | `LEAST(a, b, ...)` | Devolve o **menor** dos valores. Ignora o vazio | `LEAST(50, 30)` | `30` | aula 18, exercício 8 (função 6) |
 | `GREATEST(a, b, ...)` | Devolve o **maior** dos valores (leitura extra) | `GREATEST(50, 30)` | `50` | — |
-| `ROUND(valor, casas)` | Arredonda para o número de casas | `ROUND(10.456, 2)` | `10.46` | exercício 8 e prova 3 |
+| `ROUND(valor, casas)` | Arredonda para o número de casas | `ROUND(10.456, 2)` | `10.46` | exercício 8 e prática da aula 21 |
 
 ### Contas sobre várias linhas (agregação)
 
@@ -68,7 +68,7 @@ Na mensagem, `true` aparece como `t` e `false` como `f`.
 |---|---|---|---|---|
 | `UPPER(t)` e `LOWER(t)` | Maiúsculas e minúsculas | `UPPER('vip25')` | `VIP25` | aula 13, aula 20 |
 | `TRIM(t)` | Tira os espaços das pontas | `TRIM('  vip25 ')` | `vip25` | aula 13, aula 20 |
-| `LPAD(t, n, c)` | Completa à esquerda até `n` caracteres | `LPAD('7', 6, '0')` | `000007` | aula 13, prova 3 |
+| `LPAD(t, n, c)` | Completa à esquerda até `n` caracteres | `LPAD('7', 6, '0')` | `000007` | aula 13 e prática da aula 21 |
 | `TO_CHAR(data, formato)` | Data como texto | `TO_CHAR(DATE '2026-11-10', 'DD/MM/YYYY')` | `10/11/2026` | aula 13, aula 18 |
 | `\|\|` | Junta textos (e números) | `'Entregue em ' \|\| 3` | `Entregue em 3` | aula 18 |
 
@@ -79,10 +79,11 @@ Na mensagem, `true` aparece como `t` e `false` como `f`.
 | `CURRENT_DATE` | A data de hoje | `CURRENT_DATE` | a data do dia | aula 13, exercícios 8 e 9 |
 | `LOCALTIMESTAMP` | A data e a hora de agora | `LOCALTIMESTAMP` | data e hora do momento | aulas 19 e 20 |
 | `INTERVAL '...'` | Um intervalo de tempo | `fechado_em + INTERVAL '48 hours'` | o momento 48 horas depois | aula 13, aula 19 |
-| data `+` número | Soma dias a uma data | `DATE '2026-11-10' + 5` | `2026-11-15` | prova 3 |
+| data `+` número | Soma dias a uma data | `DATE '2026-11-10' + 5` | `2026-11-15` | prática da aula 21 |
 | data `-` número | Tira dias de uma data | `CURRENT_DATE - 7` | a data de 7 dias atrás | exercício 8 (função 9) |
 | `::date` | Converte para data, tirando a hora | `'2026-11-10 14:30'::timestamp::date` | `2026-11-10` | exercício 8 (função 9) |
 | `current_user` | O nome do usuário do banco que está conectado | `current_user` | `postgres` | a coluna `usuario` da `auditoria_pedido` |
+| `now()` | A data e a hora de agora, com o fuso horário | `now()` | data, hora e fuso do momento | a coluna `quando` da `auditoria_pedido` (aula 20) |
 
 ## 3. Operadores de comparação
 
